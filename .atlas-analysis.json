@@ -1,0 +1,183 @@
+{
+  "projectType": "sdk-library",
+  "projectName": "phase4",
+  "projectDescription": "A lightweight, embeddable Java library for sending and receiving AS4 messages, with built-in profiles for Peppol, CEF eDelivery, BDEW, ENTSOG, and other e-delivery standards.",
+  "theme": "linden",
+  "primaryColor": "#1E40AF",
+  "lightColor": "#DBEAFE",
+  "darkColor": "#1E3A8A",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/as4-overview",
+              "concepts/pmodes",
+              "concepts/crypto",
+              "concepts/message-types"
+            ]
+          },
+          {
+            "group": "Sending Messages",
+            "pages": [
+              "sending/overview",
+              "sending/user-message",
+              "sending/pull-request",
+              "sending/attachments",
+              "sending/retry"
+            ]
+          },
+          {
+            "group": "Receiving Messages",
+            "pages": [
+              "receiving/overview",
+              "receiving/servlet-setup",
+              "receiving/message-processor-spi",
+              "receiving/incoming-security"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/overview",
+              "configuration/crypto",
+              "configuration/http-client",
+              "configuration/dynamic-discovery"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Profiles",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "profiles/overview"
+            ]
+          },
+          {
+            "group": "Peppol",
+            "pages": [
+              "profiles/peppol/overview",
+              "profiles/peppol/sending",
+              "profiles/peppol/receiving"
+            ]
+          },
+          {
+            "group": "CEF eDelivery",
+            "pages": [
+              "profiles/cef/overview",
+              "profiles/cef/sending"
+            ]
+          },
+          {
+            "group": "BDEW",
+            "pages": [
+              "profiles/bdew/overview",
+              "profiles/bdew/sending"
+            ]
+          },
+          {
+            "group": "ENTSOG",
+            "pages": [
+              "profiles/entsog/overview",
+              "profiles/entsog/sending"
+            ]
+          },
+          {
+            "group": "Other Profiles",
+            "pages": [
+              "profiles/dbnalliance",
+              "profiles/euctp",
+              "profiles/edelivery2",
+              "profiles/hredelivery",
+              "profiles/eudamed"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Core Library",
+            "pages": [
+              "api/core/as4-sender",
+              "api/core/as4-servlet",
+              "api/core/as4-configuration",
+              "api/core/crypto-factory",
+              "api/core/pmodes"
+            ]
+          },
+          {
+            "group": "Peppol API",
+            "pages": [
+              "api/peppol/phase4-peppol-sender",
+              "api/peppol/receiver-configuration"
+            ]
+          },
+          {
+            "group": "Modules",
+            "pages": [
+              "api/modules/overview"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Embeddable Java library — integrates into any existing Java application or server",
+    "Full AS4/EBMS 3.0 client and server implementation",
+    "Built-in Peppol AS4 profile with SMP-based dynamic discovery",
+    "Built-in CEF eDelivery profile for EU e-procurement",
+    "Built-in BDEW profile for energy sector message exchange",
+    "Built-in ENTSOG profile for gas transmission operators",
+    "Support for DBNAlliance, EU CTP, HR eDelivery, and eDelivery2 profiles",
+    "WS-Security (WSS4J) based signing and encryption",
+    "Configurable PMode (Processing Mode) management",
+    "Servlet and Spring Boot integration support",
+    "Dynamic endpoint discovery via SMP/SML",
+    "Retry mechanism for failed message deliveries",
+    "Duplicate message detection",
+    "MIME and MTOM attachment handling with optional compression"
+  ],
+  "publicApiSurface": [
+    "AS4Sender.builderUserMessage()",
+    "AS4Sender.builderPullRequest()",
+    "AS4Servlet (Jakarta Servlet for receiving AS4 messages)",
+    "AS4XServletHandler (low-level servlet handler)",
+    "AS4Configuration (central configuration class)",
+    "AS4CryptoFactoryConfiguration (crypto config from properties)",
+    "AS4CryptoFactoryInMemoryKeyStore (programmatic crypto config)",
+    "Phase4PeppolSender (Peppol-specific sending)",
+    "Phase4CEFSender (CEF-specific sending)",
+    "Phase4BDEWSender (BDEW-specific sending)",
+    "IPhase4PeppolIncomingSBDHandlerSPI (SPI for handling incoming Peppol messages)",
+    "Phase4PeppolDefaultReceiverConfiguration",
+    "IAS4IncomingMessageMetadata",
+    "IAS4UserMessageConsumer",
+    "IAS4SignalMessageConsumer",
+    "PMode / IPMode (Processing Mode model)",
+    "PModeManagerInMemory / PModeManagerXML",
+    "AS4IncomingHandler (low-level incoming message handler)",
+    "AS4ServerInitializer (server setup helper)",
+    "MetaAS4Manager (central manager registry)",
+    "EAS4CompressionMode (attachment compression enum)",
+    "ECryptoAlgorithmCrypt / ECryptoAlgorithmSign (crypto algorithm enums)",
+    "AS4EndpointDetailProviderPeppol (dynamic discovery for Peppol)",
+    "AS4EndpointDetailProviderBDXR / AS4EndpointDetailProviderBDXR2 (SMP discovery)"
+  ]
+}
